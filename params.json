@@ -1,6 +1,6 @@
 {
   "name": "Dreditor",
-  "tagline": "",
-  "body": "# Dreditor\r\nA web browser extension for Drupal.org that enhances user experience and\r\nfunctionality.\r\n\r\n## Development\r\n\r\n### Contributing\r\nDreditor is powered by native JavaScript code.  Simple.\r\n\r\nThe development process is powered by [Node.js](http://nodejs.org) and\r\n[Grunt](http://gruntjs.com).  Sounds complex, but is trivial!\r\n\r\nSetting up a local development environment just takes a few minutes; it's all\r\nautomated.\r\n\r\nCheck the [Contributing](https://dreditor.org/development/contributing) page to\r\nlearn more.\r\n\r\n### Maintainers\r\nTBD\r\n\r\nOriginal author: [Daniel F. Kudwien (sun)](https://drupal.org/user/54136).",
+  "tagline": "A web browser extension for Drupal.org that enhances user experience and functionality.",
+  "body": "# [Download](https://github.com/dreditor/dreditor/archive/1.2.17.zip)\r\n\r\n\r\n## Development\r\n\r\n### Contributing\r\nDreditor is powered by native JavaScript code.  Simple.\r\n\r\nThe development process is powered by [Node.js](http://nodejs.org) and\r\n[Grunt](http://gruntjs.com).  Sounds complex, but is trivial!\r\n\r\nSetting up a local development environment just takes a few minutes; it's all\r\nautomated.\r\n\r\nCheck the [Contributing](https://dreditor.org/development/contributing) page to\r\nlearn more.\r\n\r\n### Maintainers\r\nTBD\r\n\r\nOriginal author: [Daniel F. Kudwien (sun)](https://drupal.org/user/54136).",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
