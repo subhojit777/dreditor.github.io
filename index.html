@@ -17,11 +17,33 @@
 
     <section class="main-content">
       <h1>
-<a id="download" class="anchor" href="#download" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a href="https://github.com/dreditor/dreditor/archive/1.2.17.zip">Download</a>
+<a id="download-the-chrome-extension" class="anchor" href="#download-the-chrome-extension" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a href="https://chrome.google.com/webstore/detail/dreditor/dhdpoembhlojpmehepeadblhglloobao">Download the Chrome extension</a>
 </h1>
 
-<h2>
-<a id="development" class="anchor" href="#development" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Development</h2>
+<h3>
+<a id="manual-installation" class="anchor" href="#manual-installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Manual Installation</h3>
+
+<ol>
+<li>Install <a href="https://nodejs.org">Node.js</a> - ensure to install the bundled Node Package Manager <a href="https://www.npmjs.com">npm</a>, too.</li>
+<li>Install [Grunt] by running the following shell command: <code>npm install -g grunt-cli</code>
+</li>
+<li>Confirm that the Grunt CLI is installed and works: <code>grunt --version</code>
+</li>
+<li>Clone the Dreditor repository: <code>git clone https://github.com/dreditor/dreditor.git</code>
+</li>
+<li>Change into the new repository directory and install all dependencies: <code>cd dreditor</code>, <code>npm install</code>, <code>grunt install</code>
+</li>
+<li>Start a first Dreditor build by running: <code>grunt</code>
+</li>
+<li>Go to <code>chrome://extensions</code>
+</li>
+<li>Enable <em>Developer mode</em>
+</li>
+<li>Click on <em>Load unpacked extension...</em>
+</li>
+<li>Browse to the <code>/build/chrome</code> directory and click <code>Select</code>
+</li>
+</ol>
 
 <h3>
 <a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contributing</h3>
