@@ -20,8 +20,8 @@
 <a id="download-the-chrome-extension" class="anchor" href="#download-the-chrome-extension" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a href="https://chrome.google.com/webstore/detail/dreditor/dhdpoembhlojpmehepeadblhglloobao">Download the Chrome extension</a>
 </h1>
 
-<h3>
-<a id="manual-installation" class="anchor" href="#manual-installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Manual Installation</h3>
+<h2>
+<a id="manual-installation" class="anchor" href="#manual-installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Manual Installation</h2>
 
 <ol>
 <li>Install <a href="https://nodejs.org">Node.js</a> - ensure to install the bundled Node Package Manager <a href="https://www.npmjs.com">npm</a>, too.</li>
@@ -43,26 +43,99 @@
 </li>
 <li>Browse to the <code>/build/chrome</code> directory and click <code>Select</code>
 </li>
+<li>Manually refresh the extensions page after each code change</li>
 </ol>
 
+<h2>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Features</h2>
+
 <h3>
-<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contributing</h3>
+<a id="patch-reviewer" class="anchor" href="#patch-reviewer" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Patch reviewer</h3>
+
+<p>Injects a "Review" button for all .patch file attachments on drupal.org. Opens the patch file with diff syntax highlighting (removed/added/control lines) and minimal PHP syntax highlighting (comments), and allows to comment on it.</p>
+
+<ul>
+<li>Select lines in the diff to enter a patch review comment. Select further lines if the same comment pertains to other lines as well. Press "Save" to store a comment.</li>
+<li>Click on existing selections to edit a comment or select further lines. Press "Delete" to delete an existing comment.</li>
+<li>Press "Hide deletions" to only see the final resulting lines; useful to remove noise when reviewing complex code logic.</li>
+<li>Press "Hide" to temporarily read the issue, retaining your patch review comments.</li>
+<li>Press "Paste" to insert all comments including selected lines into the issue.</li>
+<li>Use the jump menu in the sidebar to quickly jump to individual files or hunks in files.</li>
+</ul>
+
+<h3>
+<a id="auto-completion" class="anchor" href="#auto-completion" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Auto-completion</h3>
+
+<p>Pressing the TAB key after certain character sequences automatically completes or converts the entered characters into a full string, and moves the cursor to the next best input position.</p>
+
+<ul>
+<li>HTML: Type <code>&lt;ul</code> to get <code>&lt;ul&gt;&lt;/ul&gt;</code>, <code>&lt;block</code> to get <code>&lt;blockquote&gt;&lt;/blockquote&gt;</code>, etc.</li>
+<li>Usernames: Type <code>@s</code> to get <code>@sun</code>, <code>@sl</code> to get <code>@slantview</code>, etc. Only usernames contained on the current page are available.</li>
+<li>Issue URLs: Paste <a href="http://drupal.org/node/123456">http://drupal.org/node/123456</a> and hit TAB to get [#123456].</li>
+<li>Comment #IDs: Type #42 and hit TAB to convert it into a link to the corresponding issue comment. #0 links to the OP.</li>
+</ul>
+
+<h3>
+<a id="commit-message-generator" class="anchor" href="#commit-message-generator" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Commit message generator</h3>
+
+<p>Scans an issue for the top contributors and generates a template that follows the documented best practice for commit messages.
+Also allows to select the primary contributor for proper git author attribution.</p>
+
+<h3>
+<a id="image-attachment-embedder" class="anchor" href="#image-attachment-embedder" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Image attachment embedder</h3>
+
+<p>Injects an "Embed" button for image attachments to quickly insert uploaded screenshots into an issue follow-up.</p>
+
+<p>Recommended browser extensions to speed up uploading of file attachments:</p>
+
+<ul>
+<li>Chrome: <a href="https://chrome.google.com/webstore/detail/bjgjolhpdlgebodaapdafhdnikagbfll">drag2up</a>
+</li>
+</ul>
+
+<h2>
+<a id="about" class="anchor" href="#about" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>About</h2>
+
+<h3>
+<a id="see-also" class="anchor" href="#see-also" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>See also</h3>
+
+<p>If you like this project, you may also like:</p>
+
+<p><strong><a href="http://userstyles.org/styles/11133">drupal.org unleashed</a> user style</strong>
+A user style for advanced drupal.org users. Requires Greasemonkey.</p>
+
+<h3>
+<a id="apis-and-helpers" class="anchor" href="#apis-and-helpers" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>APIs and helpers</h3>
+
+<p>Dreditor additionally contains the following noteworthy components and sub-systems:</p>
+
+<p><strong>jQuery.debug()</strong>
+Allows to debug and inspect arbitrary data/variables in Firebug's console, but also to access them again in the global window object (optionally using a named identifier, e.g. <code>window.debug.myValue</code>). Chainable via jQuery. Especially useful for re-accessing and debugging selected data via Firebug's console. (<em>now also available via <a href="http://drupal.org/project/admin_menu">admin_devel</a> module</em>)</p>
+
+<p><strong>jQuery Form API</strong>
+Initial stab at building, processing, and rendering jQuery-enabled forms in a JS-only environment. Supports multiple form submit handlers. To be continued.</p>
+
+<h2>
+<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contributing</h2>
 
 <p>Dreditor is powered by native JavaScript code.  Simple.</p>
 
 <p>The development process is powered by <a href="http://nodejs.org">Node.js</a> and
-<a href="http://gruntjs.com">Grunt</a>.  Sounds complex, but is trivial!</p>
+<a href="http://gruntjs.com">Grunt</a>. Sounds complex, but is trivial!</p>
 
 <p>Setting up a local development environment just takes a few minutes; it's all
 automated.</p>
 
-<p>Check the <a href="https://dreditor.org/development/contributing">Contributing</a> page to
+<p>Check the <a href="https://github.com/dreditor/dreditor/blob/1.x/CONTRIBUTING.md">Contributing</a> page to
 learn more.</p>
 
-<h3>
-<a id="maintainers" class="anchor" href="#maintainers" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Maintainers</h3>
+<h2>
+<a id="maintainers" class="anchor" href="#maintainers" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Maintainers</h2>
 
-<p>TBD</p>
+<ul>
+<li><a href="https://www.drupal.org/u/subhojit777">Subhojit Paul</a></li>
+<li><a href="https://www.drupal.org/u/drpal">Matthew Grill</a></li>
+</ul>
 
 <p>Original author: <a href="https://drupal.org/user/54136">Daniel F. Kudwien (sun)</a>.</p>
 
